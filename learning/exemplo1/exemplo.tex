@@ -1,0 +1,214 @@
+\documentclass{article}
+\usepackage[colorlinks]{hyperref}
+
+\usepackage[a4paper, landscape, margin=0.5cm]{geometry}
+\usepackage{multicol}
+
+%--------------------------------------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%--------------------------------------
+
+%Portuguese-specific commands
+%--------------------------------------
+\usepackage[portuguese]{babel}
+%--------------------------------------
+
+% ver nomes das cores em:
+% https://www.overleaf.com/learn/latex/Using_colours_in_LaTeX#Further_reading
+% svgnames
+\usepackage[svgnames]{xcolor}
+\usepackage{framed,graphicx}
+\usepackage{amsthm}
+% macro de destaque - pegar do template latex
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+% https://tex.stackexchange.com/questions/64298/error-with-xcolor-package
+
+
+\setcounter{secnumdepth}{0} % removendo numeros
+\usepackage{titlesec}
+\usepackage{sectsty}
+\setlength{\parindent}{0em} % corrigindo identação
+
+% Melhorando as descrições - http://eikimartinson.com/archives/90-LaTeX-Description-Lists-with-Dot-Leaders.html
+\usepackage{enumitem}
+%\setlist[description,hlevelsi]{hformati}
+\setlist[description]{style=sameline}
+\setlist{noitemsep}
+
+
+\begin{document}
+
+
+\section{Qualquer coisa}
+
+\begin{multicols*}{4}
+
+
+\subsectionfont{\color{green}}
+
+\hypertarget{tipos-de-dados}{%
+\subsection*{Tipos de dados}\label{tipos-de-dados}}
+
+\color{DarkGreen}
+
+
+\texttt{Integers} \ldots{} 10
+
+\texttt{Float} \ldots{} 3.14
+
+\texttt{String} \ldots{} ``abracadabra'', `magia'
+
+\texttt{Booleans} \ldots{} \texttt{True}, \texttt{False}
+
+
+
+\texttt{Integers} \hfill 10
+
+\texttt{Float} \dotfill 3.14
+
+\texttt{String} \hrulefill ``abracadabra'', `magia'
+
+\texttt{Booleans} \hfill \texttt{True}, \texttt{False}
+
+
+\subsectionfont{\color{Grey}}
+
+\subsection*{Outra seção}
+
+\color{DarkGrey}
+
+Conteúdo aqui.
+
+
+\texttt{Integers} \ldots{} 10
+
+\texttt{Float} \ldots{} 3.14
+
+\texttt{String} \ldots{} ``abracadabra'', `magia'
+
+\texttt{Booleans} \ldots{} \texttt{True}, \texttt{False}
+
+Abrindo arquivos:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{ x}\OperatorTok{>}\DecValTok{3}\NormalTok{::}
+   \ControlFlowTok{return}\NormalTok{ false}
+\end{Highlighting}
+\end{Shaded}
+
+\texttt{Integers} \hfill 10
+
+\texttt{Float} \dotfill 3.14
+
+\texttt{String} \hrulefill ``abracadabra'', `mágica'
+
+
+\section{Mais coisas}
+
+The limerick packs laughs anatomical\\
+In space that is quite economical.\\
+\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}But the good ones
+I've seen\\
+\hspace*{0.333em}\hspace*{0.333em}\hspace*{0.333em}So seldom are clean\\
+And the clean ones so seldom are comical
+
+200 Main St.\\
+Berkeley, CA 94718
+
+
+\begin{description}
+\item[Term 1]
+Definition 1
+\item[Term 2 with \emph{inline markup}]
+Definition 2
+
+\begin{verbatim}
+{ some code, part of Definition 2 }
+\end{verbatim}
+
+Third paragraph of definition 2.
+\end{description}
+
+\begin{center}\rule{0.5\linewidth}{\linethickness}\end{center}
+
+
+\subsectionfont{\color{red}}
+
+\subsection{Texto qualquer}
+
+\color{DarkRed}
+
+\begin{description}
+\item[Term 1]
+Definition 1
+\item[Term 2 with \emph{inline markup}]
+Definition 2
+
+\begin{verbatim}
+{ some code, part of Definition 2 }
+\end{verbatim}
+
+Third paragraph of definition 2.
+\end{description}
+
+O que mais?
+
+\begin{description}
+\item[Term 1]
+Definition 1
+\item[Term 2 with \emph{inline markup}]
+Definition 2
+
+\begin{verbatim}
+{ some code, part of Definition 2 }
+\end{verbatim}
+
+Third paragraph of definition 2.
+\end{description}
+
+
+
+\end{multicols*}
+
+
+
+
+\end{document}
