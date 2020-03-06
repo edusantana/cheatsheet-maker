@@ -8,9 +8,7 @@ description: |
     Utilize com sabedoria.
 ...
 
-::::: {.page cols=3}
-
-::::: {.frame backgroundcolor=gray}
+::::: {.page cols=2}
 
 # Primeiro
 
@@ -21,7 +19,8 @@ description: |
 `Float` ... 3.14
 
 
-::::
+::::: {.frame backgroundcolor=green!10 cols=3}
+
 
 # Segundo
 
@@ -37,11 +36,16 @@ Outra coisa
 
 : explicação dela
 
+
+:::::
+
 ## Interno
 
   - aa
   - bb
   - cc
+
+
 
 # Tipos de dados
 
@@ -58,5 +62,7 @@ Outra coisa
 Legal
 
 : Faz tal coisa.
+
+
 
 :::::

@@ -15,3 +15,5 @@ variables:
   - \usepackage{enumitem}
   - \setlist[description]{style=sameline}
   - \setlist{noitemsep}
+  - \usepackage{mdframed}[framemethod=tikz]
+  - \mdfdefinestyle{MeuEstilo}{linecolor=blue,frametitle=Nice,rightline=false,leftline=false}
