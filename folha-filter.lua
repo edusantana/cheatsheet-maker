@@ -31,15 +31,22 @@ if FORMAT:match 'latex' then
   function Pandoc(doc)
       local hblocks = {}
       for i,el in pairs(doc.blocks) do
-          if (el.t == "Div" and el.attributes.cols ~= nil) then
-            local estrela = ''
-            if (el.classes:includes 'page') then
-              estrela = '*'
+          if (el.t == "Div") then
+            if el.attributes.cols ~= nil then
+              local estrela = ''
+              if (el.classes:includes 'page') then
+                estrela = '*'
+              end
+              table.insert(hblocks,pandoc.RawBlock('latex',
+              '\\begin{multicols'.. estrela .. '}{' .. el.attributes.cols .. '}'))
+              table.insert(hblocks,el)
+              table.insert(hblocks,pandoc.RawBlock('latex', '\\end{multicols'.. estrela ..'}'))
             end
-             table.insert(hblocks,pandoc.RawBlock('latex',
-             '\\begin{multicols'.. estrela .. '}{' .. el.attributes.cols .. '}'))
-             table.insert(hblocks,el)
-             table.insert(hblocks,pandoc.RawBlock('latex', '\\end{multicols'.. estrela ..'}'))
+
+            for k,v in pairs(el.classes) do
+              print(k .. '-' .. v)
+            end
+
           else
             table.insert(hblocks, el)
           end

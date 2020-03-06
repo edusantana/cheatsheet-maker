@@ -9,7 +9,7 @@ FileList['learning/**/*.tex'].each do |f|
     sh "latexmk -pdflatex=lualatex -f -pdf #{t.source}"
   end
 
-  task :all => pdf_file
+  task :learning => pdf_file
 end
 
 md = FileList['folhas/**/*.md'].exclude("*README.md").each do |f|

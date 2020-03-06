@@ -8,9 +8,11 @@ description: |
     Utilize com sabedoria.
 ...
 
-::::: {#special .page cols=3}
+::::: {.page cols=3}
 
-# Primeiro {color=Red}
+::::: {.frame backgroundcolor=gray}
+
+# Primeiro
 
 `Long` .. 100000
 
@@ -19,6 +21,7 @@ description: |
 `Float` ... 3.14
 
 
+::::
 
 # Segundo
 
